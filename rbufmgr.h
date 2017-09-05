@@ -83,7 +83,7 @@ static __inline__ void rbufmgr_init(struct rbufmgr *rbufmgr, size_t max_blocks,
  * rbufmgr_empty() - check whether there is no readable entry
  * @rbufmgr: rbufmgr to check
  *
- * Return: true when it is not allowed to call rbufmgr_read or rbufmgr_peak,
+ * Return: true when it is not allowed to call rbufmgr_read or rbufmgr_peek,
  *  false otherwise
  */
 static __inline__ bool rbufmgr_empty(const struct rbufmgr *rbufmgr)
@@ -105,7 +105,7 @@ static __inline__ bool rbufmgr_full(const struct rbufmgr *rbufmgr)
 }
 
 /**
- * rbufmgr_peak() - get next entry to read but don't remove it
+ * rbufmgr_peek() - get next entry to read but don't remove it
  * @rbufmgr: rbufmgr to check
  *
  * WARNING: The rbufmgr must be in the state !rbufmgr_empty() before this
@@ -113,7 +113,7 @@ static __inline__ bool rbufmgr_full(const struct rbufmgr *rbufmgr)
  *
  * Return: index to read from the buffer
  */
-static __inline__ size_t rbufmgr_peak(const struct rbufmgr *rbufmgr)
+static __inline__ size_t rbufmgr_peek(const struct rbufmgr *rbufmgr)
 {
 	return rbufmgr->read_index;
 }

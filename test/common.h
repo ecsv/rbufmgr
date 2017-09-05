@@ -78,7 +78,7 @@ static __inline__ void check_buffers(const struct simple_buffer *sbuf,
 	assert(sbuf->write_seqno == rbuf->rbufmgr.write_seqno);
 
 	for (i = 0; i < sbuf->num_blocks; i++) {
-		assert(rbuf->rbufmgr.read_index == rbufmgr_peak(&rbuf->rbufmgr));
+		assert(rbuf->rbufmgr.read_index == rbufmgr_peek(&rbuf->rbufmgr));
 
 		ri = i + rbuf->rbufmgr.read_index;
 		ri %= rbuf->rbufmgr.max_blocks;
