@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 /* Non-linear ring buffer block management
  *
- * SPDX-FileCopyrightText: 2017, Sven Eckelmann <sven@narfation.org>
+ * SPDX-FileCopyrightText: Sven Eckelmann <sven@narfation.org>
  */
 
 #ifndef __RBUFMGR_H__
